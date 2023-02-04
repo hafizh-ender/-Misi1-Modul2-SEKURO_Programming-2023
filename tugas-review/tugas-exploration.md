@@ -27,7 +27,7 @@ Contoh:
 ----&
 0000 0110 (6)
 
-## Operator ~ (NOT/Complement)
+## Operator ~ (NOT)
 Mengubah bit menjadi 1 jika bernilai 0 dan juga kebalikannya.
 Contoh:
 ~3 = -4
