@@ -28,7 +28,7 @@ void swap(int *a, int *b) {
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	if(tahun % 100 == 0){
+    if(tahun >= 1582 && tahun % 100 == 0){
         if(tahun % 400 == 0){
             return 'Y';
         }else{
