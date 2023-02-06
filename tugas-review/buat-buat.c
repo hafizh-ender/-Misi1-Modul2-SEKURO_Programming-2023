@@ -23,13 +23,20 @@ void printArray(int array[], int size) {
 void swap(int *a, int *b) {
     int c = *a;
     *a = *b;
-    *b = *c;
-    prinf(a,b)
+    *b = c;
+    printf("%d, %d\n", *a, *b);
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+	if ((tahun % 4 == 0 && tahun % 100 != 0) || (tahun % 400 == 0))
+    {
+        return 'Y';
+    }
+    else{
+        return 'N';
+    }
+    
 }
 
 /* Nomor 3 [15 point] */
