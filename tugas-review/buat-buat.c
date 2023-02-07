@@ -29,7 +29,7 @@ void swap(int *a, int *b) {
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+	
 }
 
 /* Nomor 3 [15 point] */
@@ -46,7 +46,11 @@ int main() {
     int y = 20;
 
     printf("Sebelum: x = %d, y = %d\n", x, y);
-    swap(&x, &y);
+	
+    int tempt = a;
+	a = b;
+	b = tempt;
+	
     printf("Setelah: x = %d, y = %d\n", x, y);
 
     // Expected Output:
