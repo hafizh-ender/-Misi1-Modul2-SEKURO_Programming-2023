@@ -21,7 +21,10 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    int tempt;
+	tempt = *a;
+	*a = *b;
+	*b = tempt; 
 }
 
 /* Nomor 2 [10 poin] */
