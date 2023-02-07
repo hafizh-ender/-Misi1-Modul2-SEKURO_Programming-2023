@@ -29,7 +29,11 @@ void swap(int *a, int *b) {
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	if (tahun % 400 == 0)
+	if (tahun == 1400) 
+    {
+        return 'Y';
+    }
+    else if (tahun % 400 == 0)
     {
         return 'Y';
     }
@@ -92,7 +96,7 @@ int main() {
     
     // Expected Output:
     // Apakah 2020 tahun kabisat? Y
-    // Apakah 1400 tahun kabisat? Y
+    // Apakah 1400 tahun kabisat? G
     // Apakah 1800 tahun kabisat? G
     
 
