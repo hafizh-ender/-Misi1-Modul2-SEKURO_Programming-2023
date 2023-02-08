@@ -11,15 +11,15 @@ int main() {
     /* Nomor 1 [5 point] */
     printf("1. Sebutkan jenis-jenis primitive data type di C!\n");
     printf("Jawaban:\n");
-    printf("char, unsigned char, short, unsigned short,\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
-    printf("int, unsigned int, long, unsigned long, float,\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
-    printf("double, long double\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
+    printf("char, unsigned char, short, unsigned short,\n"); 
+    printf("int, unsigned int, long, unsigned long, float,\n"); 
+    printf("double, long double\n"); 
 
     /* Nomor 2 [5 point] */
     printf("2. Sebutkan perbedaan fungsi dan prosedur!\n");
     printf("Jawaban:\n");
-    printf("Fungsi merupakan suatu subprogram yang mengembalikan nilai\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
-    printf("sementara prosedur tidak mengembalikan nilai.\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
+    printf("Fungsi merupakan suatu subprogram yang mengembalikan nilai\n"); 
+    printf("sementara prosedur tidak mengembalikan nilai.\n"); 
 
     /* Nomor 3 [5 point] */
     int **val;
