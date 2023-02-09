@@ -13,7 +13,7 @@ Bitwise operators atau bit level progamming digunakan untuk memanipulasi suatu b
    Operator ini akan mengevalusi 1 jika salah satu dari kedua operands terdapat 1. Selain hal tersebut maka hasilnya adalah 0
 3. The **^ (Bitwise XOR)**
    Operator ini akan mengevaluasi 1 jika salah satu dari operands adalah 1, tetapi keduanya bukanlah 1. Selain hal tersebut maka hasilnya adalah 0
-4. The **~ (Bitwise NOT)**
+4. The <b>~ (Bitwise NOT)</b>
    Operator ini akan mengevaluasi operands menjadi komplemennya, misal, return 1 jika operand adalah 0 (dan sebaliknya).
    <br><br>
    Keempat operator tersebut dirangkum dalam tabel berikut
