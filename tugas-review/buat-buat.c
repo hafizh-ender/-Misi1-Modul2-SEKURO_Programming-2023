@@ -11,32 +11,59 @@
 //     /* aksi */
 // }
 // Setelah:
-void printArray(int array[], int size) {
+void printArray(int array[], int size)
+{
     printf("[ ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         printf("%d ", array[i]);
     }
     printf("]");
 }
 
 /* Nomor 1 [5 poin] */
-void swap(int *a, int *b) {
-    /* aksi */
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 /* Nomor 2 [10 poin] */
-char isKabisat(int tahun) {
-	/* aksi */
+char isKabisat(int tahun)
+{
+    // jika tahunnya diatas atau sama dengan 1582 maka mengikuti syarat tahun kabisat yang baru, kalau bukan maka mengikuti syarat yang lama
+    if ((tahun >= 1582 && ((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0)) || (tahun < 1582 && tahun % 4 == 0))
+    {
+        return 'Y';
+    }
+    else
+    {
+        return 'G';
+    }
 }
 
 /* Nomor 3 [15 point] */
-void transformArray(int *ptr, int size) {
-    /* aksi */
+void transformArray(int *ptr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        // i merepresentasikan indeks elemen pada array, karena *ptr menunjuk pada alamat elemen pertama array.
+        if (*(ptr + i) % 2 == 0)
+        {
+            *(ptr + i) = 1;
+        }
+        else
+        {
+            *(ptr + i) = 0;
+        }
+    }
 }
 
-int main() {
+int main()
+{
     /* Program berikut bisa dipakai untuk memeriksa jawaban kalian */
-    
+
     /* Nomor 1 [5 poin] */
     /* Lengkapi prosedur swap() yang menukarkan value dua variabel integer */
     int x = 10;
@@ -52,7 +79,6 @@ int main() {
 
     printf("\n");
 
-
     /* Nomor 2 [10 poin] */
     /* Lengkapi fungsi isKabisat() yang mengembalikan apakah tahun yang dimasukkan merupakan tahun kabisat atau bukan */
     /* Informasi: Pada awal pembentukan kalender masehi, semua tahun yang dapat dibagi 4 merupakan tahun kabisat. Namun, sejak tahun 1582 M, tahun kelipatan 100 yang bukan kelipatan 400 tidak lagi disebut kabisat. */
@@ -60,16 +86,15 @@ int main() {
     int year1 = 2020;
     int year2 = 1400;
     int year3 = 1800;
-    
+
     printf("Apakah %d tahun kabisat? %c\n", year1, isKabisat(year1));
     printf("Apakah %d tahun kabisat? %c\n", year2, isKabisat(year2));
     printf("Apakah %d tahun kabisat? %c\n", year3, isKabisat(year3));
-    
+
     // Expected Output:
     // Apakah 2020 tahun kabisat? Y
     // Apakah 1400 tahun kabisat? Y
     // Apakah 1800 tahun kabisat? G
-    
 
     printf("\n");
 
