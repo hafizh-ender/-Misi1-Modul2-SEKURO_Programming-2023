@@ -23,13 +23,13 @@ int main()
 		printf("%d adalah bilangan genap\n\n", x);
 	}
 
-    // Problem: kalikan sebuah variable dengan angka dua, menggunakan bitwise operator
-    int a1 = 20;
-    printf("%d x 2 adalah %d\n\n", a1, a1 << 1);
+    	// Problem: kalikan sebuah variable dengan angka dua, menggunakan bitwise operator
+	int a1 = 20;
+	printf("%d x 2 adalah %d\n\n", a1, a1 << 1);
 
 	// Problem: Gunakan bitwise operator untuk melakukan integer division by 2
 	int a2 = 11;
-    printf("Integer division 11 dengan 2 adalah %d\n\n", a2 >> 1);
+   	printf("Integer division 11 dengan 2 adalah %d\n\n", a2 >> 1);
 
     return 0;
 }
