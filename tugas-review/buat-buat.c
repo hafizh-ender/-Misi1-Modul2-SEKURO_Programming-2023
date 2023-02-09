@@ -32,6 +32,7 @@ void swap(int *a, int *b)
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun)
 {
+    // jika tahunnya diatas atau sama dengan 1582 maka mengikuti syarat tahun kabisat yang baru, kalau bukan maka mengikuti syarat yang lama
     if ((tahun >= 1582 && ((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0)) || (tahun < 1582 && tahun % 4 == 0))
     {
         return 'Y';
@@ -47,6 +48,7 @@ void transformArray(int *ptr, int size)
 {
     for (int i = 0; i < size; i++)
     {
+        // i merepresentasikan indeks elemen pada array, karena *ptr menunjuk pada alamat elemen pertama array.
         if (*(ptr + i) % 2 == 0)
         {
             *(ptr + i) = 1;
