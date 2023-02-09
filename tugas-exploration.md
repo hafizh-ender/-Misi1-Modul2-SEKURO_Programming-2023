@@ -17,7 +17,9 @@ Bitwise operators atau bit level progamming digunakan untuk memanipulasi suatu b
    Operator ini akan mengevaluasi operands menjadi komplemennya, misal, return 1 jika operand adalah 0 (dan sebaliknya).
    <br><br>
    Keempat operator tersebut dirangkum dalam tabel berikut
+
    ![Table logical Operator](img/Table-Evaluation-of-bitwise-operators-on-1-bit-values.jpg)
+
    [Source Table](https://ecomputernotes.com/what-is-c/operator/c-bitwise-operators)
 
 5. The **<< (Left Shift)**
@@ -43,7 +45,9 @@ Bitwise operators atau bit level progamming digunakan untuk memanipulasi suatu b
         a >> 2 akan menjadi 1110
         b >> 2 akan menjadi 0001
         ```
+
         ![Shift Operation](img/Effect-of-bitwise-not-left-shift-and-right-shift-operators-on-4-bit-int.jpg)
+
         [Source Table](https://ecomputernotes.com/what-is-c/operator/c-bitwise-operators)
         </details>
 
