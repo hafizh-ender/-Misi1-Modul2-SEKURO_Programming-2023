@@ -32,10 +32,12 @@ char isKabisat(int tahun) {
 	/* aksi */
     if (tahun % 4 == 0){
         if (tahun > 1582){
-            if (tahun % 100 == 0){
+            if (tahun % 100 == 0 && tahun % 400 != 0){ // Jika tahun kelipatan 100 tetapi bukan kelipatan 400
+                return 'G';
+            } else{ // Jika tahun kelipatan 4 atau 400
                 return 'Y';
             }
-        } else {
+        } else { // Jika tahun kelipatan 4 sebelum 1582
             return 'Y';
             }
     } else {
@@ -47,12 +49,8 @@ char isKabisat(int tahun) {
 void transformArray(int *ptr, int size) {
     /* aksi */
     for (int i = 0; i < size; i++) {
-        if (ptr[i] % 2 == 0){
-            ptr[i] = 1;
-        } else {
-            ptr[i] = 0;
+        *(ptr + i) = (*(ptr + i) % 2 == 0) ? 1 : 0;
         }
-    }
 }
 
 int main() {
