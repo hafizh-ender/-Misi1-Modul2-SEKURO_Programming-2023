@@ -44,3 +44,9 @@ Operator ini melakukan right shift pada bit pertama, nilai kedua menentukan juml
 Contoh:
 a >> 3 = 1 (kode bit: 00000001, kolom bit digeser 3 ke kanan )
 ```
+```
+Operator ~ (NOT)
+Operator ini mengubah kolom bit 0 menjadi 1 dan 1 menjadi 0 (invers)
+Contoh:
+a = ~a (bernilai 246 dengan kode bit: 11110110)
+```
