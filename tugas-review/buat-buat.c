@@ -28,13 +28,24 @@ void swap(int *a, int *b) {
 }
 
 /* Nomor 2 [10 poin] */
-char isKabisat(int tahun) {
+void isKabisat() {
+	if (tahun %100 == 0 && tahun %400 != 0){ /*untuk tahun > 1582 M
+		/* print aksi */
+	}
 	
+	if (tahun %4 == 0){ /*untuk tahun < 1582 M
+		print aksi */
+	}
 }
 
 /* Nomor 3 [15 point] */
-void transformArray(int *ptr, int size) {
-    /* aksi */
+void transformArray(int array[], int lenght, int value, int new) {
+    int i;
+    for (i = 0; i < length; i ++){
+        if (array[i] == value){
+            array[i] = new;
+        }
+    }
 }
 
 int main() {
@@ -67,10 +78,30 @@ int main() {
     int year1 = 2020;
     int year2 = 1400;
     int year3 = 1800;
+	
+	if (year1 %100 == 0  && year1 %400 != 0 ){
+        	printf("Apakah %d tahun kabisat? G \n", year1);
+    }
+    	else {
+		printf("Apakah %d tahun kabisat? Y \n", year1);
+        
+    }
+	if (year2 %4 == 0){
+		printf("Apakah %d tahun kabisat? Y \n", year2);
+	}
+	else{
+		printf("Apakah %d tahun kabisat? G \n", year2);
+	}
+    if (year3 %100 == 0  && year3 %400 != 0 ){
+        	printf("Apakah %d tahun kabisat? G \n", year3);
+    }
+    	else {
+		printf("Apakah %d tahun kabisat? Y \n", year3);
+        
+    }
     
-    printf("Apakah %d tahun kabisat? %c\n", year1, isKabisat(year1));
-    printf("Apakah %d tahun kabisat? %c\n", year2, isKabisat(year2));
-    printf("Apakah %d tahun kabisat? %c\n", year3, isKabisat(year3));
+    
+ 
     
     // Expected Output:
     // Apakah 2020 tahun kabisat? Y
@@ -83,19 +114,43 @@ int main() {
     /* Nomor 3 [15 poin] */
     /* Lengkapi prosedur checkArray() yang mengubah isi sebuah array of integer */
     /* Jika elemen dari array tersebut bilangan ganjil, maka nilai elemen tersebut berubah menjadi 0 */
-    /* Jika elemen dari array tersebut bilangan genap, maka nilai elemen tersebut berubah menjadi 1 */
-    int array[SIZE_OF_ARRAY] = {19, 62, 31, 1};
+    void replace(int array[], int lenght, int value, int new) {
+    int i;
+    for (i = 0; i < length; i ++){
+        if (array[i] == value){
+            array[i] = new;
+        }
+    }
+}elemen dari array tersebut bilangan genap, maka nilai elemen tersebut berubah menjadi 1 
+	
+    int array[] = {19, 62, 31, 1};
+	int main() {
+    int array[] = {19, 62, 31, 1};
+    int length = 4;
+    int i;
+    int genap;
+    int ganjil;
 
     printf("Sebelum: ");
-    printArray(array, SIZE_OF_ARRAY);
+    for (i = 0; i < length; i++){
+        printf("%d" ,array[i]);
+    }
     printf("\n");
 
-    transformArray(array, SIZE_OF_ARRAY);
+    replace(array, length, 19, 0);
+    replace(array, length, 62, 1);
+    replace(array, length, 31, 0);
+    replace(array, length, 1, 0);
 
     printf("Setelah: ");
-    printArray(array, SIZE_OF_ARRAY);
+    for (i = 0; i < length; i++){
+        printf("%d" ,array[i]);
+    }
     printf("\n");
+    return 0;
+}
 
+   
     // Expected Output:
     // Sebelum: [ 19 62 31 1 ]
     // Setelah: [ 0 1 0 0 ]
