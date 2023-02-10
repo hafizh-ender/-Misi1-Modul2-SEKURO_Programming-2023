@@ -10,7 +10,7 @@ Hasil akan bernilai 1 jika kedua bit pada posisi yang sama bernilai berbeda, dan
 Contoh: 12 ^ 25 = 21
 4. Not (~) <br>
 Nilai 1 akan diubah menjadi 0 dan nilai 0 akan diubah menjadi 1.<br>
-Contoh: 
+Contoh: a = 12, f = ~a, f = -13
 5. Bitwise Left Shift (<<>) <br>
 Operator Bitwise Left Shift memindahkan setiap bit pada sebuah angka ke kiri sebanyak n posisi. Nilai bit pada posisi terakhir akan hilang dan nilai bit baru pada posisi pertama akan bernilai 0.<br>
 Contoh: 12 << 2 = 48
