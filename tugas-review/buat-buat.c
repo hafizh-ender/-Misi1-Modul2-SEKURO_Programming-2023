@@ -21,19 +21,34 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    int x = *a;
+    *a = *b;
+    *b = x;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+    if (tahun < 1582 && tahun%4 == 0)
+        return 'Y';
+    else if (tahun%400 == 0)
+        return 'Y';
+    else if (tahun%100==0)
+        return 'G';
+    else if (tahun%4==0)
+        return 'Y';
+    else
+        return 'G';
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    for (int i = 0; i < size; i++){
+        if (ptr[i] % 2 == 0){
+            ptr[i] = 1;}
+        else{
+            ptr[i] = 0;}
+    }
 }
-
 int main() {
     /* Program berikut bisa dipakai untuk memeriksa jawaban kalian */
     
