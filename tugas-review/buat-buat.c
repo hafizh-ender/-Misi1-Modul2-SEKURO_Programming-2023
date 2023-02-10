@@ -22,16 +22,35 @@ void printArray(int array[], int size) {
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
     /* aksi */
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
 	/* aksi */
+    if (tahun % 4 == 0){
+        if (tahun > 1582){
+            if (tahun % 100 == 0 && tahun % 400 != 0){ // Jika tahun kelipatan 100 tetapi bukan kelipatan 400
+                return 'G';
+            } else{ // Jika tahun kelipatan 4 atau 400
+                return 'Y';
+            }
+        } else { // Jika tahun kelipatan 4 sebelum 1582
+            return 'Y';
+            }
+    } else {
+        return 'G';
+    }
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
     /* aksi */
+    for (int i = 0; i < size; i++) {
+        *(ptr + i) = (*(ptr + i) % 2 == 0) ? 1 : 0;
+        }
 }
 
 int main() {
