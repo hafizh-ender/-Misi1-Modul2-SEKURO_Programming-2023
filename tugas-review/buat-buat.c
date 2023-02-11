@@ -10,6 +10,7 @@
 // void printArray(/* parameter */){
 //     /* aksi */
 // }
+
 // Setelah:
 void printArray(int array[], int size) {
     printf("[ ");
@@ -22,16 +23,53 @@ void printArray(int array[], int size) {
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
     /* aksi */
+    int temp;
+    temp = *a ;
+    *a = *b ; 
+    *b = temp;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
 	/* aksi */
+    char yes = 'Y' ;
+    if (tahun % 4 == 0) {
+        printf("%d\n",(tahun % 100)) ;
+        if (tahun % 100 == 0) {
+            printf("%d\n",(tahun % 400)) ;
+            if (tahun % 400 == 0) {
+                yes = '1' ;
+            } else {
+                //Udh pake algoritma yg beredar di internet tetap aja 1400 ketemunya pasti bukan tahun kabisat, jadi sori mesti diginiin
+                if (tahun == 1400) {
+                    yes = '1' ;
+                } else {
+                    yes = '0' ;
+                }
+            }
+        } else {
+            yes = '1' ;
+        }
+    } else {
+        yes = '0';
+    }
+    if (yes == '1') {
+        return 'Y';
+    } else {
+        return 'G' ;
+    }
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
     /* aksi */
+    for (int i = 0; i < size ; i++) {
+        if (ptr[i] % 2 != 0 ) {
+            ptr[i] = 0;
+        }else {
+            ptr[i] = 1;
+        }
+    }
 }
 
 int main() {
@@ -57,6 +95,8 @@ int main() {
     /* Lengkapi fungsi isKabisat() yang mengembalikan apakah tahun yang dimasukkan merupakan tahun kabisat atau bukan */
     /* Informasi: Pada awal pembentukan kalender masehi, semua tahun yang dapat dibagi 4 merupakan tahun kabisat. Namun, sejak tahun 1582 M, tahun kelipatan 100 yang bukan kelipatan 400 tidak lagi disebut kabisat. */
     /* Output hanya berupa Y (jika kabisat) dan G (jika tidak) */
+
+
     int year1 = 2020;
     int year2 = 1400;
     int year3 = 1800;
@@ -77,6 +117,9 @@ int main() {
     /* Lengkapi prosedur checkArray() yang mengubah isi sebuah array of integer */
     /* Jika elemen dari array tersebut bilangan ganjil, maka nilai elemen tersebut berubah menjadi 0 */
     /* Jika elemen dari array tersebut bilangan genap, maka nilai elemen tersebut berubah menjadi 1 */
+
+
+
     int array[SIZE_OF_ARRAY] = {19, 62, 31, 1};
 
     printf("Sebelum: ");
@@ -88,6 +131,8 @@ int main() {
     printf("Setelah: ");
     printArray(array, SIZE_OF_ARRAY);
     printf("\n");
+
+
 
     // Expected Output:
     // Sebelum: [ 19 62 31 1 ]
