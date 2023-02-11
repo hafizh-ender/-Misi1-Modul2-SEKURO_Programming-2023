@@ -1,11 +1,12 @@
 # Tugas Eksplorasi: Binary Representation
+Catatan: Untuk mengakses program yang digunakan dalam penjelasan ini, silakan akses `tugas-exploration.c` yang tertera.
 
 <p>&nbsp;</p>
 
 ## Daftar Isi
-1. [Operator dan Operator Bitwise](#operator)
-2. [Fungsi dari Operator Bitwise](#operator-dan-operator-bitwise)
-3. [Contoh Implementasi](#contoh-implementasi)
+1. [Operator dan Operator Bitwise](#operator-)
+2. [Fungsi dari Operator Bitwise](#operator-dan-operator-bitwise-)
+3. [Contoh Implementasi](#contoh-implementasi-)
 
 <p>&nbsp;</p>
 

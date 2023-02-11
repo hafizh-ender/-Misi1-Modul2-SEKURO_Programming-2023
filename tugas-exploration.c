@@ -1,3 +1,7 @@
+/*Muhammad Kamal - 16022434 - FMIPA IPA - SEKURO 2023*/
+
+// Penjelasan lebih lengkap tentang program ada di markdown yang tertera dengan nama sama
+
 #include <stdio.h>
 
 int main() {
