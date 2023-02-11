@@ -42,7 +42,7 @@ Contoh:
 - 0111 >> 2 = 0001
 - 1011 >> 1 = 0101
 
-### **~ (NOT)**
+### ~ (NOT)
 Operator ~ mengambil satu operan dan membalikkan semua bits (0 menjadi 1, 1 menjadi 0).\
 Contoh:
 - ~0111 = 1000
