@@ -2,36 +2,40 @@
 
 #define SIZE_OF_ARRAY 4
 
-/* Pada file ini, kalian diminta untuk melengkapi fungsi/prosedur di bawah ini  */
-/* sesuai dengan spesifikasi yang diberikan */
-
-/* Contoh */
-// Sebelum:
-// void printArray(/* parameter */){
-//     /* aksi */
-// }
-// Setelah:
-void printArray(int array[], int size) {
-    printf("[ ");
-    for (int i = 0; i < size; i++) {
-        printf("%d ", array[i]);
-    }
-    printf("]");
-}
-
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    temp = a;
+    a = b;
+    b = temp; 
 }
+
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+    if (tahun % 4 == 0 && tahun % 100 != 0 && tahun % 400 != 0)
+    {
+        printf("Tahun kabisat");
+    }
+    else {
+        print("Bukan tahun kabisat");
+    }
+}
+
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    for (int i = 0; i < ptr; i++)
+    {
+        if (ptr[i] % 2 == 0)
+        {
+            size[i] == 1;
+        }
+        else {
+            size[i] == 0;
+        }
+        printf(size);
+    }
 }
 
 int main() {
