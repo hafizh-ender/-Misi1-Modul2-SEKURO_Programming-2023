@@ -54,7 +54,13 @@ char isKabisat(int tahun) {
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    for (int i=0;i<size;i++){  
+        if (ptr[i] % 2 == 0) {
+            ptr[i] = 1;
+        } else {
+            ptr[i] = 0;
+        }
+    }
 }
 
 int main() {
