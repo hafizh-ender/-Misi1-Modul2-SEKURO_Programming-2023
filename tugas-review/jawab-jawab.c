@@ -11,18 +11,18 @@ int main() {
     /* Nomor 1 [5 point] */
     printf("1. Sebutkan jenis-jenis primitive data type di C!\n");
     printf("Jawaban:\n");
-    printf("...\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
+    printf("int, float, character, double, short int, unsigned int, long int, long long int, unsigned long int, unsigned long long int\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
 
     /* Nomor 2 [5 point] */
     printf("2. Sebutkan perbedaan fungsi dan prosedur!\n");
     printf("Jawaban:\n");
-    printf("...\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
+    printf("Fungsi adalah sebuah subprogram yang mengembalikan suatu value, sedangkan prosedur adalah subprogram yang akan mengubah suatu state dari program\n"); // lengkapi di sini. jawaban tidak dibatasi dalam 1 baris
 
     /* Nomor 3 [5 point] */
     int **val;
     printf("3. Apa tipe data dari deklarasi variabel di atas?");
     printf("Jawaban:\n");
-    printf("...\n");
+    printf("variabel diatas adalah sebuah pointer yang menunjuk sebuah pointer lagi\n");
 
     return 0;
 }
