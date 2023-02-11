@@ -20,18 +20,52 @@ void printArray(int array[], int size) {
 }
 
 /* Nomor 1 [5 poin] */
-void swap(int *a, int *b) {
+void swap(int* x, int* y) {
     /* aksi */
+    *x = *x + *y;
+    *y = *x - *y;
+    *x = *x - *y;
 }
 
 /* Nomor 2 [10 poin] */
-char isKabisat(int tahun) {
+char* isKabisat(int tahun) {
 	/* aksi */
+    if (tahun >= 1582){
+        if (tahun%4 ==0){
+            if (tahun%100 != 0){
+                return "Y";
+            } else{
+                if (tahun%400==0){
+                    return "Y";
+                } else {
+                    return "G";
+                }
+            }
+        } else {
+            return "G";
+        } 
+    } else {
+        if (tahun%4==0){
+            return "Y";
+        } else {
+            return "G";
+        }
+    }
+
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
     /* aksi */
+    for (int i = 0; i< size; i++){
+        if (*ptr%2 == 0 ){
+            *ptr = 1;
+            *ptr++;
+        } else {
+            *ptr =0;
+            *ptr++;
+        }
+    }
 }
 
 int main() {
@@ -61,9 +95,9 @@ int main() {
     int year2 = 1400;
     int year3 = 1800;
     
-    printf("Apakah %d tahun kabisat? %c\n", year1, isKabisat(year1));
-    printf("Apakah %d tahun kabisat? %c\n", year2, isKabisat(year2));
-    printf("Apakah %d tahun kabisat? %c\n", year3, isKabisat(year3));
+    printf("Apakah %d tahun kabisat? %c\n", year1, *isKabisat(year1));
+    printf("Apakah %d tahun kabisat? %c\n", year2, *isKabisat(year2));
+    printf("Apakah %d tahun kabisat? %c\n", year3, *isKabisat(year3));
     
     // Expected Output:
     // Apakah 2020 tahun kabisat? Y
