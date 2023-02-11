@@ -21,17 +21,32 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+	int tuker = *a;
+	*a = *b;
+	*b = tuker;
 }
+
+
+
+
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+    if (tahun % 400 == 0 || (tahun % 100 != 0 && tahun % 4 == 0)) {
+        return 'Y';
+    } else {
+        return 'G';
+    }
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+		for (int i = 0; i < size; i++) {
+			if ((ptr + i) % 2 == 0) {
+				*(ptr + i) = 1;
+			} else {
+				*(ptr + i) = 0;
+			}
 }
 
 int main() {
