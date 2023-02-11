@@ -21,17 +21,38 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    int temp = *a; // Variabel temp untuk menyimpan nilai sementara
+    *a = *b;
+    *b = temp;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+	if (tahun >= 1582) { // Special case : apabila tahun lebih besar sama dengan 1582, tahun yang bukan kelipatan 100 dan merupakan kelipatan 400 disebut kabisat.
+        if (tahun % 400 == 0 || (tahun % 100 != 0 && tahun % 4 == 0)) {
+            return 'Y';
+        } else {
+            return 'G';
+        }
+    } else {
+        if (tahun % 4 == 0) {
+            return 'Y';
+        } else {
+            return 'G';
+        }
+    }
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    for (int i = 0; i < size; i++) { // Loop pengulangan untuk mengecek tiap elemen dalam array
+        if (*ptr % 2 == 0) {
+            *ptr = 1;
+        } else {
+            *ptr = 0;
+        }
+    ptr++;
+    }
 }
 
 int main() {
