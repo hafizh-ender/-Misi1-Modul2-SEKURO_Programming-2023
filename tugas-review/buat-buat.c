@@ -5,12 +5,6 @@
 /* Pada file ini, kalian diminta untuk melengkapi fungsi/prosedur di bawah ini  */
 /* sesuai dengan spesifikasi yang diberikan */
 
-/* Contoh */
-// Sebelum:
-// void printArray(/* parameter */){
-//     /* aksi */
-// }
-// Setelah:
 void printArray(int array[], int size) {
     printf("[ ");
     for (int i = 0; i < size; i++) {
@@ -20,18 +14,49 @@ void printArray(int array[], int size) {
 }
 
 /* Nomor 1 [5 poin] */
-void swap(int *a, int *b) {
-    /* aksi */
+void swap(int *x, int *y) {
+    int buf;
+    buf = *x;
+    *x = *y;
+    *y = buf;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+	if (tahun < 1582 && tahun % 4 == 0){
+        printf("Y\n");
+    }
+    else { //(tahun >= 1582)
+        if (tahun % 100 != 0 && tahun % 4 == 0) {
+            printf("Y\n");
+        }
+        else if (tahun % 100 == 0){
+            if (tahun % 400 == 0){
+                printf("Y\n");
+            }
+            else{
+                printf("G\n");
+            }
+        }
+        else {
+            printf("G\n");
+        }
+    }
 }
 
 /* Nomor 3 [15 point] */
-void transformArray(int *ptr, int size) {
-    /* aksi */
+void transformArray(int A[], int size) {
+    int i = 0;
+    while (i < size){
+        if (A[i] % 2 == 0){
+            A[i] = 1;
+            i++;
+        }
+        else{ // array[i] % 2 != 0
+            A[i] = 0;
+            i++;
+        }
+    }
 }
 
 int main() {
@@ -69,7 +94,6 @@ int main() {
     // Apakah 2020 tahun kabisat? Y
     // Apakah 1400 tahun kabisat? Y
     // Apakah 1800 tahun kabisat? G
-    
 
     printf("\n");
 
