@@ -21,17 +21,33 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    *a = *a - *b;
+    *b = *a + *b;
+    *a = *b - *a;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+	if (tahun%400 == 0) {
+        printf("Y");
+    } else if (tahun%100 == 0) {
+        printf("G");
+    } else if (tahun%4 == 0) {
+        printf("Y");
+    } else {
+        printf("G");
+    }
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    for (int i=0; i < SIZE_OF_ARRAY; i++) {
+        if (*(ptr+i) % 2 == 0) {
+            *(ptr+i) = 1;
+        } else {
+            *(ptr+i) = 0;
+        }
+    }
 }
 
 int main() {
