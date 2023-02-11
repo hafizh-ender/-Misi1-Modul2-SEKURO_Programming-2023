@@ -22,16 +22,44 @@ void printArray(int array[], int size) {
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
     /* aksi */
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
 	/* aksi */
+    if (tahun % 100 == 0 && tahun % 400 == 0) {
+        printf("Y");
+    }
+    else if (tahun < 1582 && tahun % 100 == 0 && tahun % 400 != 0) {
+        printf("Y");
+    }
+    else if (tahun >= 1582 && tahun % 100 == 0 && tahun % 400 != 0) {
+        printf("G");
+    }
+    else if (tahun % 4 == 0) {
+        printf("Y");
+    }
+    else {
+        printf("G"); 
+    }
 }
 
 /* Nomor 3 [15 point] */
-void transformArray(int *ptr, int size) {
+void transformArray(int* ptr, int size) {
     /* aksi */
+    ptr[size];
+
+    for(int i = 0; i < size; i++) {
+        if (ptr[i] % 2 == 0) {
+            ptr[i] = 1;
+        }
+        else {
+            ptr[i] = 0;
+        }
+    }
 }
 
 int main() {
@@ -60,7 +88,7 @@ int main() {
     int year1 = 2020;
     int year2 = 1400;
     int year3 = 1800;
-    
+
     printf("Apakah %d tahun kabisat? %c\n", year1, isKabisat(year1));
     printf("Apakah %d tahun kabisat? %c\n", year2, isKabisat(year2));
     printf("Apakah %d tahun kabisat? %c\n", year3, isKabisat(year3));
