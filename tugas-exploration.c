@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
 {
-	//12 (00001100), 25(00001100)
+	//12 (00001100), 25(00011001)
 	unsigned char a = 12, b = 25;
 
-	// Hasilnya adalah 00001100 (8)
+	// Hasilnya adalah 00001000 (8)
 	printf("a = %d, b = %d\n", a, b);
 	printf("a&b = %d\n", a & b);
 
