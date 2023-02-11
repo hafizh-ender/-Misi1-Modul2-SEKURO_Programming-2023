@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 #define SIZE_OF_ARRAY 4
@@ -21,17 +22,41 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    int temp; 
+    temp = *a; 
+    *a = *b; 
+    *b = temp;
+
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
-}
+    char status;
+	if ((tahun % 400 == 0) || (tahun % 4 == 0 && tahun % 100 != 0)) {
+        status = 'Y';
+    }
+    else{
+        status = 'G';
+    }
+    return status;
+}   
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    int arr[size];
+    for (int i = 0; i < size; i++) {
+        arr[i] = ptr[i];
+    }
+    for (int i = 0; i < size; i++) {
+        if (arr[i] % 2 == 0) {
+            arr[i] = 1;
+        } else {
+            arr[i] = 0;
+        }
+    }
+    for (int i = 0; i < size; i++) {
+        ptr[i] = arr[i];
+    }
 }
 
 int main() {
