@@ -13,13 +13,13 @@
         <ul>
             <li>Sintaks operator : |</li>
             <li>Deskripsi proses : menerima dua angka dan melakukan operasi OR pada setiap bit dua angka tersebut. Operasi OR menghasilkan 1 jika ada salah satu bit yang bernilai 1.</li>
-            <li>Contoh penggunaan: 3 | 7 = (011 & 111) = (111) = 7 </li>
+            <li>Contoh penggunaan: 3 | 7 = (011 | 111) = (111) = 7 </li>
         </ul>
     <li><h3> XOR Operator</h3></li>
         <ul>
             <li>Sintaks operator : |</li>
             <li>Deskripsi proses : menerima dua angka dan melakukan operasi XOR pada setiap bit dua angka tersebut. Operasi XOR menghasilkan 1 jika bit yang bernilai 1 berjumlah ganjil, sisanya bernilai 0.</li>
-            <li>Contoh penggunaan: 3 ^ 7 = (011 & 111) = (100) = 4 </li>
+            <li>Contoh penggunaan: 3 ^ 7 = (011 ^ 111) = (100) = 4 </li>
         </ul>
     <li><h3> Left Shift Operator</h3></li>
         <ul>
