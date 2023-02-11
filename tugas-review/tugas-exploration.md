@@ -33,7 +33,7 @@
             <li>Deskripsi proses : menerima dua angka , menggeser bit angka pertama ke kanan sebanyak angka kedua.</li>
             <li>Contoh penggunaan: 5 >> 1 = (101 => 010) = 2  </li>
         </ul>
-    <li><h3> NOT operator </h3></li>'
+    <li><h3> NOT operator </h3></li>
         <ul>
             <li>Sintaks operator : ~ </li>
             <li>Deskripsi proses : menerima satu angka dan membalikkan nilai setiap bit.</li>
