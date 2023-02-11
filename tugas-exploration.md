@@ -6,7 +6,7 @@
 >> ```
 >> a = 5 (desimal) = 00000101 (biner)
 >> b = 9 (desimal) = 00001001 (biner)
->> a & b (Hasilnya 00000001)
+>> a & b = 1 (desimal) = 00000001 (biner)
 >> ```
 >
 >> ### **2. Bitwise OR "|"** 
@@ -15,7 +15,7 @@
 >> ```
 >> a = 5 (desimal) = 00000101 (biner)
 >> b = 9 (desimal) = 00001001 (biner)
->> a | b (Hasilnya 00001101)
+>> a | b = 13 (desimal) = 00001101 (biner)
 >> ```
 >
 >> ### **3. Bitwise XOR "^"**
@@ -24,7 +24,7 @@
 >> ```
 >> a = 5 (desimal) = 00000101 (biner)
 >> b = 9 (desimal) = 00001001 (biner)
->> a ^ b (Hasilnya 00001100)
+>> a ^ b = 12 (desimal) = 00001100 (biner)
 >> ```
 >
 >> ### **4. Bitwise NOT "~"**
@@ -32,21 +32,21 @@
 >> Contoh :
 >> ```
 >> a = 5 (desimal) = 00000101 (biner)
->> ~a (Hasilnya 11111010)
+>> ~a = -6 (desimal) = 11111010 (biner)
 >> ```
 >
 >> ### **5. Left Shift "<<"**
 >> Operator ini akan menggeser posisi bit dalam variabel a ke kiri sebanyak 1 tempat. Dan posisi bit yang kosong akan tertulis sebagai 0.
 >> Contoh :
 >> ```
->> a = 5 (desimal) = 00000101 (biner)
->> ~a (Hasilnya 00001010)
+>> b = 9 (desimal) = 00001001 (biner)
+>> b << 1 = 18 (desimal) =  00010010 (biner)
 >> ```
 >
 >> ### **6. Right Shift ">>"**
 >> Operator ini akan menggeser posisi bit dalam variabel a ke kanan sebanyak 1 tempat. Dan posisi bit yang kosong akan tertulis sebagai 0.
 >> Contoh :
 >> ```
->> a = 5 (desimal) = 00000101 (biner)
->> ~a (Hasilnya 00000010)
+>> b = 9 (desimal) = 00001001 (biner)
+>> b >> 1 = 4 (desimal) = 00000100 (biner)
 >> ```
