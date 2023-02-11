@@ -4,8 +4,8 @@ Catatan: Untuk mengakses program yang digunakan dalam penjelasan ini, silakan ak
 <p>&nbsp;</p>
 
 ## Daftar Isi
-1. [Operator dan Operator Bitwise](#operator-)
-2. [Fungsi dari Operator Bitwise](#operator-dan-operator-bitwise-)
+1. [Operator dan Operator Bitwise](#operator-dan-operator-bitwise-)
+2. [Fungsi dari Operator Bitwise](#fungsi-dari-operator-bitwise-)
 3. [Contoh Implementasi](#contoh-implementasi-)
 
 <p>&nbsp;</p>
