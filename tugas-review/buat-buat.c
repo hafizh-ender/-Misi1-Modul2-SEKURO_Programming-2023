@@ -20,23 +20,42 @@ void printArray(int array[], int size) {
 }
 
 /* Nomor 1 [5 poin] */
-void swap(int *a, int *b) {
-    /* aksi */
+void swap(int* a, int* b) {
+    *a = *a - *b; // a = a1 - b1
+    *b = *a + *b; // b = (a1 - b1) + b1 = a1
+    *a = *b - *a; // a = a1 - (a1 - b1) = b1
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+    if (tahun % 4 == 0) {
+        if (tahun <= 1582) {
+            return 'Y';
+        }
+        else {
+            if (tahun % 100 == 0 && tahun % 400 != 0) {
+                return 'G';
+            }
+            else {
+                return 'Y';
+            }
+        }
+    }
+    else {
+        return 'G';
+    }
 }
 
 /* Nomor 3 [15 point] */
-void transformArray(int *ptr, int size) {
-    /* aksi */
+void transformArray(int* ptr, int size) {
+    for (int i = 0; i < size; i++) {
+        ptr[i] = (ptr[i] + 1) % 2;
+    }
 }
 
 int main() {
     /* Program berikut bisa dipakai untuk memeriksa jawaban kalian */
-    
+
     /* Nomor 1 [5 poin] */
     /* Lengkapi prosedur swap() yang menukarkan value dua variabel integer */
     int x = 10;
@@ -60,16 +79,16 @@ int main() {
     int year1 = 2020;
     int year2 = 1400;
     int year3 = 1800;
-    
+
     printf("Apakah %d tahun kabisat? %c\n", year1, isKabisat(year1));
     printf("Apakah %d tahun kabisat? %c\n", year2, isKabisat(year2));
     printf("Apakah %d tahun kabisat? %c\n", year3, isKabisat(year3));
-    
+
     // Expected Output:
     // Apakah 2020 tahun kabisat? Y
     // Apakah 1400 tahun kabisat? Y
     // Apakah 1800 tahun kabisat? G
-    
+
 
     printf("\n");
 
@@ -77,7 +96,7 @@ int main() {
     /* Lengkapi prosedur checkArray() yang mengubah isi sebuah array of integer */
     /* Jika elemen dari array tersebut bilangan ganjil, maka nilai elemen tersebut berubah menjadi 0 */
     /* Jika elemen dari array tersebut bilangan genap, maka nilai elemen tersebut berubah menjadi 1 */
-    int array[SIZE_OF_ARRAY] = {19, 62, 31, 1};
+    int array[SIZE_OF_ARRAY] = { 19, 62, 31, 1 };
 
     printf("Sebelum: ");
     printArray(array, SIZE_OF_ARRAY);
