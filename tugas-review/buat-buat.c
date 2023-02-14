@@ -21,17 +21,49 @@ void printArray(int array[], int size) {
 
 /* Nomor 1 [5 poin] */
 void swap(int *a, int *b) {
-    /* aksi */
+    int num = *a ;
+    *a = *b ;
+    *b = num ;
 }
 
 /* Nomor 2 [10 poin] */
 char isKabisat(int tahun) {
-	/* aksi */
+    int num = tahun ;
+    
+    if (tahun % 100 == 0 ){  /*cek apakah kelipatan 100*/
+        if(num % 400 == 0){
+            return 'Y' ;
+        }
+        else {
+            return'G' ;
+        }
+
+    }
+   
+        
+    
+    if (tahun % 4 == 0) {
+        return 'Y';
+        
+    }
+    else {
+        return 'G';
+    }
+    
+    return 0;
 }
 
 /* Nomor 3 [15 point] */
 void transformArray(int *ptr, int size) {
-    /* aksi */
+    for (int i = 0; i < size; i++){
+        if (ptr[i] % 2 == 0) {
+            ptr[i]=1 ;     
+        }
+        else { 
+            ptr[i]=0;   
+        }
+    
+    }   
 }
 
 int main() {
@@ -67,7 +99,7 @@ int main() {
     
     // Expected Output:
     // Apakah 2020 tahun kabisat? Y
-    // Apakah 1400 tahun kabisat? Y
+    // Apakah 1400 tahun kabisat? Y seharusnya G karena 1400 bukan kelipatan 400
     // Apakah 1800 tahun kabisat? G
     
 
